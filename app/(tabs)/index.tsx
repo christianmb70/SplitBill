@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { StyleSheet, Platform, Image, Text, View, Button } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -7,64 +7,95 @@ import { ThemedView } from '@/components/ThemedView';
 
 export default function HomeScreen() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
+    <View style={styles.container}> 
+      <Text>Title:</Text>
+      <Text>What was your total?</Text>
+      <Text>How many people</Text>
+      <Text>Did you leave a Tip?</Text>
+
+      <View style={styles.row}>
+        <View style={styles.column}>
+          <View style={styles.button1}>
+            <Button
+              title="5%"
+              color="Black"
+            />
+          </View>
+        </View>
+        <View style={styles.button1}>
+          <Button
+            title="10%"
+            color="Black"
+          />
+        </View>
+        <View style={styles.button1}>
+          <Button
+            title="15%"
+            color="Black"
+          />
+        </View>
+        <View style={styles.button1}>
+          <Button
+            title="20%"
+            color="Black"
+          />
+        </View>
+      </View>
+
+      <View style={styles.button1}>
+        <Button
+          title="Custom"
+          color="Black"
         />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title"></ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({ ios: 'cmd + d', android: 'cmd + m' })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+      </View>
+      <View style={styles.button2}>
+        <Button 
+          title="Submit"
+          color="black"/>
+      </View>
+    </View> 
   );
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
+  container: { 
+        flex: 1, 
+        backgroundColor: '#F3EBE4', 
+        alignItems: 'center', 
+        justifyContent: 'center', 
+    },
+    row:{
+      width: 134,
+      paddingTop: 5,
+      paddingBottom: 6,
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center',
+      rowGap: 3,
+      columnGap: 3,
+      borderRadius: 10,
+    },
+    column: {
+      flexDirection: 'column',
+    },
+    Profile: {
+      textAlign: 'center',
+      fontFamily: 'Inter',
+      fontSize: 50,
+      fontStyle: 'normal',
+      fontWeight: '700',
+      padding: 20
+    },
+    button1: {
+      paddingLeft: 10,
+      paddingRight: 10,
+      borderRadius: 10,
+      backgroundColor: 'rgba(190, 178, 160, 1)',
+    },
+    button2: {
+      paddingLeft: 10,
+      paddingRight: 10,
+      borderRadius: 10,
+      backgroundColor: 'rgba(183, 203, 191, 1)',
+    }, 
 });

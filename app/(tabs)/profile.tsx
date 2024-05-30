@@ -20,7 +20,7 @@ export default function TabTwoScreen() {
           }} source={require('../../assets/images/robert.jpg')}></Image>
       </View>
       <View style={styles.Profile}>
-        <Text>Name</Text>
+        <Text>John Smith</Text>
       </View>
       <View style={styles.button1}>
         <Button
