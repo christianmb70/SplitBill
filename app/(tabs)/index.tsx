@@ -1,4 +1,5 @@
-import { StyleSheet, Platform, Image, Text, View, Button } from 'react-native';
+import React from 'react';
+import { StyleSheet, Platform, Image, Text, View, Button,TextInput} from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -6,21 +7,45 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
 export default function HomeScreen() {
+  const [text, onChangeText] = React.useState('');
+  const [Total, onChangeTotal] = React.useState('');
+  const [People, onChangePeople] = React.useState('');
+
   return (
     <View style={styles.container}> 
-      <Text>Title:</Text>
-      <Text>What was your total?</Text>
-      <Text>How many people</Text>
-      <Text>Did you leave a Tip?</Text>
-
       <View style={styles.row}>
-        <View style={styles.column}>
-          <View style={styles.button1}>
-            <Button
-              title="5%"
-              color="Black"
-            />
-          </View>
+        <Text style={styles.text}>Title:</Text>
+        <TextInput 
+          style={styles.input}
+          onChangeText={onChangeText}
+          placeholder='Title'
+          value={text}
+        />
+      </View>
+      <Text style={styles.text}>What was your Total?</Text>
+      <TextInput
+        style={styles.input}
+        onChangeText={onChangeTotal}
+        value={Total}
+        placeholder="10.00"
+        keyboardType="numeric"
+      />
+      <Text style={styles.text}>How many people</Text>
+      <TextInput
+        style={styles.input}
+        onChangeText={onChangePeople}
+        value={People}
+        placeholder="10.00"
+        keyboardType="numeric"
+      />
+      <Text style={styles.text}>Did you leave a Tip?</Text>
+      
+      <View style={styles.row}>
+        <View style={styles.button1}>
+          <Button
+            title="5%"
+            color="Black"
+          />
         </View>
         <View style={styles.button1}>
           <Button
@@ -28,6 +53,8 @@ export default function HomeScreen() {
             color="Black"
           />
         </View>
+      </View>
+      <View style={styles.row}>
         <View style={styles.button1}>
           <Button
             title="15%"
@@ -73,18 +100,21 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       rowGap: 3,
       columnGap: 3,
+    },
+    input: {
+      height: 40,
+      width: 100,
+      margin: 12,
+      padding: 10,
       borderRadius: 10,
-    },
-    column: {
-      flexDirection: 'column',
-    },
-    Profile: {
       textAlign: 'center',
+      backgroundColor: 'rgba(190, 178, 160, 1)',
+    },
+    text: {
       fontFamily: 'Inter',
-      fontSize: 50,
+      fontSize: 30,
       fontStyle: 'normal',
       fontWeight: '700',
-      padding: 20
     },
     button1: {
       paddingLeft: 10,
