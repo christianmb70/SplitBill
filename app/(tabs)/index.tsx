@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Platform, Image, Text, View, Button,TextInput} from 'react-native';
+import { StyleSheet, Platform, Image, Text, View, Button,TextInput, Keyboard} from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -11,6 +11,10 @@ export default function HomeScreen() {
   const [Total, onChangeTotal] = React.useState('');
   const [People, onChangePeople] = React.useState('');
 
+  const handleDonePress = () => {
+    Keyboard.dismiss();
+  };
+  
   return (
     <View style={styles.container}> 
       <View style={styles.row}>
@@ -20,6 +24,8 @@ export default function HomeScreen() {
           onChangeText={onChangeText}
           placeholder='Title'
           value={text}
+          returnKeyType="done"
+          onSubmitEditing={handleDonePress}
         />
       </View>
       <Text style={styles.text}>What was your Total?</Text>
@@ -29,6 +35,8 @@ export default function HomeScreen() {
         value={Total}
         placeholder="10.00"
         keyboardType="numeric"
+        returnKeyType="done"
+        onSubmitEditing={handleDonePress}
       />
       <Text style={styles.text}>How many people</Text>
       <TextInput
@@ -37,6 +45,8 @@ export default function HomeScreen() {
         value={People}
         placeholder="10.00"
         keyboardType="numeric"
+        returnKeyType="done"
+        onSubmitEditing={handleDonePress}
       />
       <Text style={styles.text}>Did you leave a Tip?</Text>
       

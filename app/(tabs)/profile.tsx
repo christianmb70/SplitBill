@@ -1,5 +1,6 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { StyleSheet, Image, Platform, Text, View, Button} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
@@ -8,10 +9,15 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
 export default function TabTwoScreen() {
+  // const navigation = useNavigation();
+  // const handlePress = () => {
+  //   navigation.navigate("past_transactions"); 
+  // };
+
   return (
     <View style={styles.container}> 
-      <View style={styles.Profile}>
-        <Text>Profile</Text>
+      <View>
+        <Text style={styles.Profile}>Profile</Text>
       </View>
       <View>
         <Image style={{
@@ -26,6 +32,9 @@ export default function TabTwoScreen() {
         <Button
           title="Past Transactions"
           color="Black"
+          // onPress={() => {
+          //     props.navigation.navigate("past_transactions");
+          // }}
         />
       </View>
     </View> 
