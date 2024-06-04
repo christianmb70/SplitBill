@@ -21,19 +21,21 @@ export default function TabTwoScreen() {
       </View>
       <View>
         <Image style={{
-            width: '100%',
-            height: 300
-          }} source={require('../../assets/images/robert.jpg')}></Image>
+            width: 200,
+            height: 200,
+            borderRadius: 50
+          }} 
+          source={require('../../assets/images/robert.jpg')}/>
       </View>
-      <View style={styles.Profile}>
-        <Text>John Smith</Text>
+      <View >
+        <Text style={styles.Text}>John Smith</Text>
       </View>
       <View style={styles.button1}>
         <Button
           title="Past Transactions"
           color="Black"
           // onPress={() => {
-          //     props.navigation.navigate("past_transactions");
+          //     useNavigation.navigate("past_transactions");
           // }}
         />
       </View>
@@ -52,6 +54,14 @@ const styles = StyleSheet.create({
       textAlign: 'center',
       fontFamily: 'Inter',
       fontSize: 50,
+      fontStyle: 'normal',
+      fontWeight: '700',
+      padding: 20
+    },
+    Text: {
+      textAlign: 'center',
+      fontFamily: 'Inter',
+      fontSize: 30,
       fontStyle: 'normal',
       fontWeight: '700',
       padding: 20
