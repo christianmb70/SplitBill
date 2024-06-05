@@ -17,18 +17,33 @@ export default function TabThreeScreen() {
         <Image style={{
             width: 50,
             height: 50,
-            borderRadius: 50,
           }} 
-          source={require('../../assets/images/profile.webp')}/>
+          source={require('../../assets/images/Profile_icon.png')}/>
         <Text style={styles.text}>Profile</Text>
       </View>
       <View style={styles.row}>
+        <Image style={{
+            width: 50,
+            height: 50,
+          }} 
+          source={require('../../assets/images/payments.png')}/>
         <Text style={styles.text}>Payment Methods</Text>
       </View>
       <View style={styles.row}>
+        <Image style={{
+            width: 50,
+            height: 50,
+          }} 
+          source={require('../../assets/images/privacy.png')}/>
         <Text style={styles.text}>Privacy</Text>
       </View>
       <View style={styles.row}>
+        <Image style={{
+            width: 50,
+            height: 50,
+            borderRadius: 50,
+          }} 
+          source={require('../../assets/images/notifications.png')}/>
         <Text style={styles.text}>Notifications</Text>
       </View>
     </View>

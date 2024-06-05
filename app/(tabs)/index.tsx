@@ -14,7 +14,7 @@ export default function HomeScreen() {
   const handleDonePress = () => {
     Keyboard.dismiss();
   }; 
-  
+
   return (
     <View style={styles.container}> 
       <View style={styles.row}>
