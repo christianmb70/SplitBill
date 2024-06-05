@@ -13,7 +13,7 @@ export default function HomeScreen() {
 
   const handleDonePress = () => {
     Keyboard.dismiss();
-  };
+  }; 
   
   return (
     <View style={styles.container}> 
@@ -95,11 +95,11 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { 
-        flex: 1, 
+  container: {
+        flex: 1,
         backgroundColor: '#F3EBE4', 
-        alignItems: 'center', 
-        justifyContent: 'center', 
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     row:{
       width: 134,
@@ -133,6 +133,7 @@ const styles = StyleSheet.create({
       backgroundColor: 'rgba(190, 178, 160, 1)',
     },
     button2: {
+      marginTop: 80,
       paddingLeft: 10,
       paddingRight: 10,
       borderRadius: 10,

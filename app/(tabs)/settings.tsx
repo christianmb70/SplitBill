@@ -23,13 +23,13 @@ export default function TabThreeScreen() {
         <Text style={styles.text}>Profile</Text>
       </View>
       <View style={styles.row}>
-        <Text>Payment Methods</Text>
+        <Text style={styles.text}>Payment Methods</Text>
       </View>
       <View style={styles.row}>
-        <Text>Privacy</Text>
+        <Text style={styles.text}>Privacy</Text>
       </View>
       <View style={styles.row}>
-        <Text>Notifications</Text>
+        <Text style={styles.text}>Notifications</Text>
       </View>
     </View>
   );
