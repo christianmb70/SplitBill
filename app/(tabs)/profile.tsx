@@ -8,10 +8,11 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
+
 export default function TabTwoScreen() {
   // const navigation = useNavigation();
   // const handlePress = () => {
-  //   navigation.navigate("past_transactions"); 
+  //   navigation.navigate("PastTransactions"); 
   // };
 
   return (
@@ -34,9 +35,7 @@ export default function TabTwoScreen() {
         <Button
           title="Past Transactions"
           color="Black"
-          // onPress={() => {
-          //     useNavigation.navigate("past_transactions");
-          // }}
+          // onPress={handlePress}
         />
       </View>
     </View> 
