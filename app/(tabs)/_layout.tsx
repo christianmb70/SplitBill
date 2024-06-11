@@ -5,7 +5,7 @@ import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import TabTwoScreen from './profile';
-import PastTransactionsScreen from '../PastTransactionsScreen';
+import PastTransactionsScreen from './PastTransactions';
 import ProfileStack from '../ProfileStackNavigator';
 
 // const Stack = createNativeStackNavigator();
@@ -38,7 +38,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="ProfileStack"
+        name="profile"
         // component={ProfileStack}
         options={{
           title: 'Profile',
@@ -60,6 +60,15 @@ export default function TabLayout() {
         name="unequal"
         options={{
           title: 'Unequal',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="PastTransactions"
+        options={{
+          title: 'Past Transactions',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
           ),

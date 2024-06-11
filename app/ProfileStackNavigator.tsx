@@ -2,7 +2,7 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import TabTwoScreen from './(tabs)/profile';
-import PastTransactionsScreen from './PastTransactionsScreen';
+import PastTransactionsScreen from './(tabs)/PastTransactions';
 
 const Stack = createNativeStackNavigator();
 

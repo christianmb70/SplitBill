@@ -31,13 +31,13 @@ export default function TabTwoScreen() {
       <View >
         <Text style={styles.Text}>John Smith</Text>
       </View>
-      <View style={styles.button1}>
+      {/* <View style={styles.button1}>
         <Button
           title="Past Transactions"
           color="Black"
           // onPress={handlePress}
         />
-      </View>
+      </View> */}
     </View> 
   );
 }
