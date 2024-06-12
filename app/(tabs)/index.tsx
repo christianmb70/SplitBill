@@ -137,7 +137,7 @@ export default function HomeScreen({ navigation }: { navigation: any }) {
       </Modal>
 
       <View style={styles.button2}>
-        <Button title="Submit" color="transparent" />
+        <Button title="Submit" color="white" />
       </View>
     </View>
   );

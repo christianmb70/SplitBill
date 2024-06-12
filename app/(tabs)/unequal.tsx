@@ -38,7 +38,7 @@ interface Entry {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
-        <Text style={styles.text}>Customize </Text>
+        <Text style={styles.text}>        Customize </Text>
         {entries.map((entry, index) => (
           <View key={index} style={styles.row}>
             <TextInput
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 40,
-    width: 100,
+    width: 80,
     margin: 8,
     padding: 10,
     borderRadius: 10,

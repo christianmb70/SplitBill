@@ -16,7 +16,7 @@ const transactions = [
     id: '2',
     date: '2024-06-03',
     description: 'Salary',
-    amount: '+$1500.00',
+    amount: '-$1500.00',
     total: '$1500.00',
     tipPercent: '0%',
     splitType: 'Even',
